@@ -19,7 +19,7 @@ namespace Demo
                 .AddOtlpExporter(opt =>
                                  {
                                      opt.Endpoint = new Uri("<signoz_endpoint>");
-                                     opt.Protocol = OtlpExportProtocol.HttpProtobuf;
+                                     opt.Protocol = OtlpExportProtocol.Grpc;
                                      opt.Headers = "signoz-access-token=<signoz_ingestion_key>";
                                  })
                 .AddConsoleExporter()
